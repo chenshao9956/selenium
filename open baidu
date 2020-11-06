@@ -1,0 +1,6 @@
+from selenium import webdriver #导入 selenium 下面的 webdriver 模块
+driver = webdriver.Chrome()    #调用 webdriver 模块下的 Chrome()类（注意大小写），赋值给变量 driver
+driver.get("https://www.baidu.com") #通过 driver 变量，调用 Chrome()类提供的 get()方法访问百度首页
+driver.find_element_by_id("kw").send_keys("Selenium")
+driver.find_element_by_id("su").click() # find_element_by_id()方法分别定位页面上的元素，并且通过 send_keys()和 click()做输入、单击操作
+driver.quit()     #关闭浏览器                                          
